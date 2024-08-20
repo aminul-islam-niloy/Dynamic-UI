@@ -35,7 +35,7 @@ namespace UI_Design_Application.Controllers
                 return NotFound();
             }
 
-            var citizen = await _context.Messages
+            var citizen = await _context.Messages.Include(c=>c.Address)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (citizen == null)
             {

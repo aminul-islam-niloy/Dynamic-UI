@@ -40,6 +40,18 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Profession)
         </dd>
+
+        <dt class="col-sm-2">
+            Address:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Address.Division),
+            @Html.DisplayFor(model => model.Address.District),
+            @Html.DisplayFor(model => model.Address.Thana),
+            @Html.DisplayFor(model => model.Address.Word),
+            @Html.DisplayFor(model => model.Address.PostalCode)
+        </dd>
+
     </dl>
 </div>
 <div>
